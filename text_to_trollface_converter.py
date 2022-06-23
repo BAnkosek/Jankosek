@@ -30,7 +30,10 @@ def main():
     
     
     ### your text goes into this VVV, make sure to watch out for "characters, cause they can finish the string. 
-    text = list("Give devbranch? What do you mean give devbranch? Do you have any idea how significant the devs vision is for the game? Their  bug fixing which is completely unknown is paramount to this games future and they’re working hard to give this to us. And you just come here to say fucking what? 'Give devbranch?' 2 fucking ignorant words coming from your numbskull brain. You can't comprehend the pure intellect it requires to be a moderator let alone BE a DEV and run Siege Camp. And you disrespect those people that contribute much to this great cause, the crusade that will show us the real means of developing. Your dumbass shouldn't be in this world let alone a fucking devbranch.")
+    ### if text is shorter than required (185 characters long) program will add in random text as filler
+    text = list("Givedevbranch?Whatdoyoumeangivedevbranch?Doyouhaveanyideahowsignificantthedevsvisionisforthegame?Theirbugfixingwhichiscompletelyunknownisparamounttothisgamesfutureandthey’reworkinghardt")
+    if len(text) < 185:
+        text.append(('abcdefghijklmnopqrstuvxyz' * (1+ (185 - len(text)//24)))
     text_without_spaces = list()
     
     for z in range (len(text)):
